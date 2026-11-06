@@ -1,0 +1,65 @@
+{
+  "name": "@groovesheet/sdk",
+  "version": "0.1.0",
+  "description": "Official GrooveSheet SDK and CLI: search the sheet music library, transcribe audio to sheet music, MIDI and stems, poll jobs and download results.",
+  "license": "MIT",
+  "author": "Kelin Studio <support@groovesheet.net>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groovesheet/groovesheet-sdk.git"
+  },
+  "homepage": "https://www.groovesheet.net/developers",
+  "bugs": {
+    "url": "https://github.com/groovesheet/groovesheet-sdk/issues"
+  },
+  "keywords": [
+    "groovesheet",
+    "music transcription",
+    "sheet music",
+    "midi",
+    "stems",
+    "audio to midi",
+    "cli",
+    "sdk"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./openapi.json": "./openapi.json",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "groovesheet": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "openapi.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('node:fs').chmodSync('dist/cli.js', 0o755)\"",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "generate": "node scripts/generate.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "openapi-fetch": "0.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3"
+  }
+}
