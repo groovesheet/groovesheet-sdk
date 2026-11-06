@@ -30,9 +30,9 @@ export const DEFAULT_USER_AGENT = `groovesheet-sdk/${VERSION} (+https://www.groo
  *   quantize to MusicXML (MIDI comes along in the outputs).
  * - `chords`: chord chart from the full mix.
  * - `stems`: stem separation only.
- * - `midi`: quantize a MIDI file you already have into a MusicXML score
- *   (`midi2score_quantize`). The web app does not start this one; use the
- *   `workflow` option for anything not listed here (`listWorkflows()` has them all).
+ * Every transcription's outputs include MIDI, so there is no separate `midi`
+ * instrument. Use the `workflow` option for anything not listed here
+ * (`listWorkflows()` has them all).
  */
 export const INSTRUMENT_WORKFLOWS = {
   drums: 'separate_to_drumscore_v2_full',
@@ -41,7 +41,6 @@ export const INSTRUMENT_WORKFLOWS = {
   guitar: 'separate_to_guitar_score_full',
   chords: 'chords_from_mix_full',
   stems: 'bs_roformer_separate',
-  midi: 'midi2score_quantize',
 } as const;
 
 export type Instrument = keyof typeof INSTRUMENT_WORKFLOWS;

@@ -79,7 +79,6 @@ try {
 | `guitar` | `separate_to_guitar_score_full` | guitar MIDI, notation and tab |
 | `chords` | `chords_from_mix_full` | chord chart |
 | `stems` | `bs_roformer_separate` | six stems (vocals, drums, bass, guitar, piano, other) |
-| `midi` | `midi2score_quantize` | quantize a MIDI file you already have into a MusicXML score |
 
 ## CLI
 
@@ -92,7 +91,7 @@ npx @groovesheet/sdk search "easy on me"      # or: npm i -g @groovesheet/sdk, t
 | `groovesheet search <query> [--instrument x] [--format sheet\|midi\|stems] [--page n] [--limit n] [--json]` | Search the library. |
 | `groovesheet song <id-or-slug> [--json]` | One song and its parts. |
 | `groovesheet workflows [--json]` | List every workflow. |
-| `groovesheet transcribe <file> (--instrument drums\|piano\|bass\|guitar\|chords\|stems\|midi \| --workflow name) [--wait] [--out dir] [--json]` | Start a job; with `--wait` poll to the end, with `--out` also save the files. |
+| `groovesheet transcribe <file> (--instrument drums\|piano\|bass\|guitar\|chords\|stems \| --workflow name) [--wait] [--out dir] [--json]` | Start a job; with `--wait` poll to the end, with `--out` also save the files. |
 | `groovesheet job <id> [--wait] [--json]` | Show a job, or wait for it. |
 | `groovesheet jobs [--limit n] [--json]` | Your recent jobs. |
 | `groovesheet download <id> [file_key] [--out dir]` | Save one output file, or all of them. |

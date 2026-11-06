@@ -69,7 +69,6 @@ describe('basics', () => {
       guitar: 'separate_to_guitar_score_full',
       chords: 'chords_from_mix_full',
       stems: 'bs_roformer_separate',
-      midi: 'midi2score_quantize',
     });
     assert.throws(() => workflowForInstrument('kazoo'), /Unknown instrument/);
   });

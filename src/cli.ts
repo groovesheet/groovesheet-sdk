@@ -29,7 +29,7 @@ Commands
   search <query>               Search songs   [--instrument x] [--format sheet|midi|stems] [--page n] [--limit n]
   song <id-or-slug>            Show one song and its parts
   workflows                    List every workflow
-  transcribe <file>            Start a job   (--instrument drums|piano|bass|guitar|chords|stems|midi | --workflow name)
+  transcribe <file>            Start a job   (--instrument drums|piano|bass|guitar|chords|stems | --workflow name)
                                [--wait] [--out dir] [--idempotency-key k]
   job <id>                     Show a job   [--wait]
   jobs                         List your recent jobs   [--limit n]
